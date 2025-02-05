@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>2PlayersDama Online - Login</title>
+    <link rel="stylesheet" href="./css/indexStyle.css">
+    <script src="./js/scriptIndex.js">
+    </script>
+</head>
+<body>
+
+    <div class="container">
+
+        <main>
+            <h1>2PlayersDama Online</h1>
+
+            <div class="form-container">
+    
+                <div id="login-form" class="form active">
+                    <h2>Login</h2>
+                    <p>Accedi con il tuo account utente registrato.</p>
+                    <form action="php/checkLogin.php" method="post">
+                        <label>Username:</label>
+                        <input id="username-login" type="text" name="username" placeholder="Inserire username" pattern="[a-z0-9]{1,60}" title="Puoi inserire solo lettere minuscole e numeri, massimo 60 caratteri." required>
+                        <label >Password:</label>
+                        <input id="password-login" type="password" name="password" placeholder="Inserire password" pattern="[A-Za-z0-9!@#$%^&*]{8,16}" title="La password deve essere tra 8 e 16 caratteri." required>
+                        <button type="submit">Login</button>
+                    </form>
+                    <p>Se non sei ancora registrato, </p>
+                    <button onclick="displayForm()">Registrazione</button>
+                </div>
+    
+                <div id="register-form" class="form">
+                    <h2>Registrazione</h2>
+                    <form action="php/checkRegister.php" method="post">
+                        <label>Username:</label>
+                        <input id="username-register" type="text" name="username" placeholder="Inserire nuovo username" pattern="[a-z0-9]{1,60}" title="Puoi inserire solo lettere e numeri, massimo 60 caratteri." required>
+                        <label>Password:</label>
+                        <input id="password-register" type="password" name="password" placeholder="Inserire nuova password" pattern="[A-Za-z0-9!@#$%^&*]{8,16}" title="La password deve essere tra 8 e 16 caratteri." required>
+                        <label>Conferma Password:</label>
+                        <input type="password" name="password-conferma" placeholder="Reinserire nuova password" pattern="[A-Za-z0-9!@#$%^&*]{8,16}" title="La password deve essere tra 8 e 16 caratteri." required>
+                        <button type="submit">Registrati</button>
+                    </form>
+                    <button onclick="displayForm()">Torna al login</button>
+                </div>
+    
+            </div>
+        </main>
+
+        <aside>
+            <section>
+                <h2>Manuale Utente</h2>
+                <article>
+                    <h3>Compilazione form per registrazione e login utente</h3>
+                    <p>Per accedere al gioco &egrave; necessario registrarsi prima di tutto. Per la registrazione fare click
+                        su &quot;Registrazione&quot;, quindi scegliere un nuovo username (che non esiste ancora) e una password.
+                        Dopo aver confermato la password fare click su &quot;Registra&quot; per la registrazione vera e propria.
+                        Una volta registrato, effettuare il login con le credenziali scelte durante la registrazione. <br> L'accesso
+                        al gioco prevede la possibilit&agrave; di invitare altri giocatori ad una partita e visualizzare la lista
+                        degli inviti, visualizzare il proprio profilo utente, visualizzare la lista degli amici e le richieste
+                        d'amicizia, visualizzare la classifica TOP 10 delle vittorie tra gli amici.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Come invitare amici a giocare</h3>
+                    <p>Una volta fatto l'accesso con le proprie credenziali, &egrave; possibile invitare gli amici a giocare.
+                        Nella sezione &quot;Inizia Partita&quot; &egrave; necessario cercare lo username completo ed esatto
+                        del giocatore con cui si vuole giocare nella barra di ricerca player, quindi fare click su &quot;Invita
+                        a giocare&quot; (di fianco al risultato) per mandare l'invito ad una partita. Per visualizzare gli inviti
+                        degli altri giocatori fare click su &quot;Vedi inviti&quot;. Nella lista degli inviti è possibile rifiutare
+                        o accettare tali inviti. <br> Per poter invitare un giocatore questo deve essere gi&agrave; presente nella
+                        lista degli amici. Se un giocatore cercato non &egrave; nella lista degli amici, &egrave; necessario fare
+                        click su &quot;Aggiungi Amico&quot; di fianco al risultato della ricerca player. Per visualizzare le richieste
+                        di amicizia navigare nella sezione &quot;Amici&quot;, quindi fare click su &quot;Vedi richieste&quot;.
+                        Nella lista delle richieste d'amicizia è possibile rifiutare o accettare tali richieste. <br> Nella sezione
+                        &quot;Amici&quot; &egrave; inoltre possibile visualizzare la lista degli amici. Se si vuole rimuovere un giocatore
+                        dalla lista degli amici, fare click su &quot;Rimuovi&quot; di fianco allo username del giocatore in tale lista. 
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Regole del gioco</h3>
+                    <ul>
+                        <li>Il gioco &egrave; sempre iniziato dal giocatore che conduce la partita con le pedine bianche.</li>
+                        <li>I giocatori effettuano, alternativamente, una mossa per volta passando il turno: bianco, nero, bianco ecc.</li>
+                        <li>Le pedine muovono sempre in avanti di una casella sulle caselle scure e
+                            quando raggiungono la base avversaria diventano dame.</li>
+                        <li>La dama si contrassegna con la sovrapposizione di un altro pezzo dello stesso colore.</li>
+                        <li>La dama pu&ograve; muovere in avanti o indietro di una casella sempre sulle caselle scure.</li>
+                        <li>Quando una pedina incontra una pedina di colore diverso, con una casella libera dietro, sulla stessa
+							diagonale, pu&ograve; mangiarla. Qualora la pedina, dopo la prima mangiata, si trovi nelle
+							condizioni di poter nuovamente prendere, deve continuare a catturare pezzi.</li>
+                        <li>La pedina pu&ograve; mangiare solo in avanti, lungo le due diagonali.</li>
+                        <li>La dama pu&ograve; mangiare (catturare, mangiare) su tutte e quattro le diagonali.</li>
+                        <li>La pedina non pu&ograve; mangiare la dama.</li>
+                        <li>Un giocatore ottiene la vittoria in due casi: o quando l'avversario non ha pi&ugrave; pedine, o quando l'avversario 
+                            abbandona per resa.</li>
+                    </ul>                       
+                </article>
+            </section>
+        </aside>
+    </div>
+</body>
+</html>

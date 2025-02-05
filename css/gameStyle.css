@@ -1,0 +1,523 @@
+body {
+    margin: 0;
+    background-color: rgb(97, 50, 36);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*
+Header style
+*/
+
+header {
+    background-color: forestgreen;
+    color: gold;
+    box-shadow: 3px 0 8px black;
+}
+
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.logo {
+    width: 5em;
+    height: 5em;
+    padding: 5px;
+    box-shadow: 0 0 5px black;
+}
+
+h1 {
+    margin: 0.5em;
+    font-size: 2em;
+    text-shadow: 5px 5px 5px black;
+}
+
+.players-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1em;
+}
+
+.login-info,
+.leave-section {
+    display: block;
+}
+
+.login-info,
+.players-info,
+.leave-section {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    font-size: 0.5em;
+    font-weight: bold;
+    border-radius: 1em;
+    box-shadow: 0 0 5px black;
+}
+
+.login-info,
+.leave-section {
+    margin: 1em;
+    padding: 2em;
+}
+
+.login-info a, 
+.leave-section a {
+    margin: 2em;
+    padding: 0.5em;
+    background-color: khaki;
+    color: black;
+    text-decoration: none;
+    font-size: 1.75em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 3px black;
+}
+
+.avatar {
+    width: 3em;
+    height: 3em;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.username-info,
+.player-info {
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgray;
+    border-radius: 0.5em;
+    box-shadow: 0 0 3px black;
+}
+
+.username-info {
+    margin-bottom: 2em;
+}
+
+.player-info {
+    margin: 1em;
+}
+
+.username-info p,
+.players-info p, 
+.player-info p{
+    font-size: 1.25rem;
+    padding: 5px;
+    margin: 5px;
+}
+
+.top-navigation {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+}
+
+
+.top-navigation ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.top-navigation a{
+    color: black;
+    border-radius: 0.5em;
+    text-decoration: none;
+    background-color: khaki;
+    border-radius: 0.5em;
+    box-shadow:  0 0 3px black;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.top-navigation ul li a.clicked{
+    background-color: rgb(128, 124, 68);
+}
+
+a:hover{
+    background-color: rgb(128, 124, 68);
+    color: white;
+}
+
+/*
+Menu style
+*/
+
+.container {
+    padding: 1em;
+    margin: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: block;
+    border-radius: 0.5em;
+    box-shadow: 0 0 5px black;
+    padding: 1em;
+    margin: 1em;
+    background-color: darkkhaki;
+}
+
+main h2{
+    color: white;
+    text-shadow: 0 0 5px black;
+    padding: 0.5em;
+    margin: 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+main section form {
+    display: flex;
+}
+
+main .msg-attesa p,
+aside h2 {
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+aside {
+    display: block;
+    padding: 0.5em;
+    margin: 1em;
+}
+
+aside .msg-inviti,
+aside .msg-richieste,
+aside .chat-container,
+aside .game-section {
+    background-color: darkkhaki;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    text-align: center;
+}
+
+aside a,
+aside #confirm-button {
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: khaki;
+    color: black;
+    text-decoration: none;
+    border-radius: 0.5em;
+    box-shadow: 0 0 3px black;
+    font-weight: bold;
+}
+
+
+aside #confirm-button {
+    border-style: outset;
+}
+
+aside #confirm-button:disabled {
+    background-color: rgba(230, 228, 218, 0.349);
+}
+
+#menu section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+    margin: 1em 0.5em;
+    box-shadow: 0 0 5px black;
+    text-align: center;
+    padding: 1em;
+}
+
+#menu section input,
+#menu section button,
+.chat-input button,
+.chat-input input {
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 0 0 5px black;
+}
+
+#menu section input[type="text"]{
+    width: 50%;
+}
+
+#menu section button,
+.chat-input button {
+    border-radius: 0.5em;
+    border: none;
+    background-color: darkgray;
+}
+
+#menu section button:hover,
+.chat-input button:hover,
+.amico form button:hover {
+    background-color: gray;
+    color: white;
+}
+
+#menu section label,
+#menu section p {
+    font-weight: bold;
+    font-size: 1.25em;
+    margin: 0.5em;
+    color: brown;
+}
+
+#inviti section,
+#richieste section,
+#amici section {
+    text-align: center;
+}
+
+#classifica table {
+    box-shadow: 0 0 5px black;
+    border-collapse: collapse;
+    background-color:lightgray;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+}
+
+#classifica section table,
+#classifica section td,
+#classifica section th {
+    border: solid 2px black;
+}
+
+#classifica section th {
+    background-color: yellowgreen;
+    color: brown;
+}
+
+#classifica section td,
+#classifica section th {
+    padding: 0.25em;
+}
+
+#classifica section td {
+    text-align: center;
+}
+
+#classifica section tr:nth-of-type(even) {
+    background-color: gray;
+}
+
+#inviti,
+#richieste,
+#classifica {
+    width: 60%;
+}
+
+#profilo {
+    width: 30%;
+}
+
+#amici ul {
+    list-style: none;
+}
+
+#amici iframe {
+    border: none;
+}
+
+.amico {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.25em;
+    margin: 0.25em;
+    background-color: yellowgreen;
+    box-shadow: 0 0 3px black;
+    text-align: center;
+}
+
+.amico p {
+    color: brown;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0.25em;
+}
+
+.amico form button {
+    padding: 0.5em;
+    margin: 0.25em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: darkgray;
+    box-shadow: 0 0 3px black;
+}
+
+#profilo section div {
+    padding: 0.5em;
+    margin: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: brown;
+    background-color: yellowgreen;
+    box-shadow: 0 0 5px black;
+}
+
+a.newMsg {
+    color: crimson;
+}
+
+#inviti button,
+#richieste button {
+    border-radius: 0.5em;
+    border: none;
+    box-shadow: 0 0 3px black;
+    background-color: darkgray;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+#inviti button:hover,
+#richieste button:hover {
+    background-color: gray;
+    color: white;
+}
+
+#inviti .pad,
+#richieste .pad {
+    display: flex;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+#inviti .invito,
+#richieste .richiesta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    background-color: yellowgreen;
+    box-shadow: 0 0 3px black;
+    margin: 1em auto;
+    padding: 0.5em;
+    width: 60%;
+}
+
+#inviti .invito p,
+#richieste .richiesta p {
+    font-weight: bold;
+    color: brown;
+    font-size: 1.25em;
+    margin: 1em;
+}
+
+.container-partita {
+    padding: 1em;
+    margin: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#partita {
+    padding: 0.75em;
+    margin: 0.25em;
+}
+
+#partita p{
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px black;
+    text-align: center;
+    margin: 0.25em;
+}
+
+.chat-container {
+    max-width: 100%;
+    margin: 0.5em;
+    overflow-wrap: break-word;
+}
+
+.chat-container .chat-names {
+    font-size: 1em;
+    color: white;
+    text-shadow: 0 0 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: gray;
+    border-radius: 0.5em 0.5em 0 0;
+}
+.chat-messages {
+    height: 30vh;
+    overflow-y: auto;
+    border-radius: 0 0 0.5em 0.5em;
+    padding: 0.5em;
+    background-color: white;
+    margin-bottom: 0.5em;
+}
+
+.chat-messages .message {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5em;
+    display: flex;
+}
+
+.chat-messages .message.tu {
+    justify-content: right;
+}
+
+.chat-messages .message.avversario {
+    justify-content: left;
+}
+
+.chat-messages .message p {
+    border-radius: 1em;
+    box-shadow: 0 0 3px black;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    margin: 0;
+    font-weight: bold;
+    max-width: 60%;
+    overflow-wrap: break-word;
+}
+
+.chat-messages .message.avversario p {
+    text-align: right;
+}
+
+.chat-messages .message.tu p {
+    text-align: left;
+}
+
+.chat-messages .message.tu p{
+    background-color: gray;
+}
+
+.chat-messages .message.avversario p{
+    background-color: lightgray;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+aside .game-section p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1.5em;
+}
