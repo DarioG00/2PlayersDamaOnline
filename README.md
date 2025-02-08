@@ -1,2 +1,2 @@
 # 2PlayersDamaOnline
-Applicazione Web
+Applicazione Web. Progetto del corso Progettazione Web.
