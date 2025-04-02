@@ -11,4 +11,4 @@ Il gioco segue la logica di un social network tipico: è possibile giocare solo 
 Altre funzionalità particolari implementate sono: classifica top 10 in base al numero di partite vinte tra gli amici registrati e chat di messaggi con l'avversario durante la partita.
 
 # Limiti dell'applicazione e possibili miglioramenti
-Non è possibile cercare un giocatore registrato, bisogna conoscere lo username esatto a priori. Una volta venuti a conoscenza dello username (in qualche modo) è possibile quindi richiedere l'amicizia.
+Non è possibile cercare un giocatore registrato senza conoscerne lo username esatto a priori. Una volta venuti a conoscenza dello username (in qualche modo) è possibile quindi richiedere l'amicizia.
